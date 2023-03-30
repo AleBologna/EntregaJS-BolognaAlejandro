@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body{
+    overflow-x: hidden;
+    background-color: #fff9ea;
+    font-family: 'Inter Tight', sans-serif;
+  }  
+
+.header{
+height: 60px;
+background-color:#fae9bd;
+display: flex;
+justify-content: space-between;
+}
+.logo img{
+  height:100%;
+  margin-left: 20px;
+}
+.div_links{
+  display: flex;
+  align-items: center;
+  font-family: 'Inter Tight', sans-serif;
+}
+.links{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
+}
+.links_estilo{
+list-style-type: none;
+}
+.links_estilo a{
+  text-decoration: none;
+  color: #693535;
+}
+.linkCarrito{
+  display: flex;
+  align-items: center;
+}
+.bxHeader{
+font-size: 1.8rem;
+}
+.tituloProductos{
+  color: #693535;
+  margin: 20px 10%;
+  border-bottom: 1px solid #693535;
+}
+.titulo_requisitos{
+  color:#693535;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 25px 20vw;
+  padding: 7px;
+  border: 2px solid #c68e00;
+  border-radius: 5px;
+}
+.section_requisitos{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.img{
+  width: 500px;
+  border: 2px solid #c68e00;
+  margin: 0px 30px 10px 30px;
+}
+.subtitulo_requisitos{
+  color:#693535;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.pasos_requisitos{
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content:flex-start;
+}
+.cont_requisitos{
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  padding: 4px;
+  font-size: 1rem;
+  background-color: #693535;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.texto_requisitos{
+  color: #693535;
+}
+
+.box-comida{
+  margin: 40px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+.card{
+  width: 150px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img-box{
+  width:100%;
+  height: 80%;
+  
+}
+.img-tamaño{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-detalles{
+  margin: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color:#693535;
+}
+.detalles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter Tight', sans-serif;
+  margin: 0px 10px;
+  padding: 5px;
+  background-color: #fae9bd;
+  border: 2px solid #693535;
+  border-radius: 10%;
+  color: #693535;
+  width: 60%;
+  cursor: pointer;
+ 
+}
+.bxbtn{
+  margin: 0px 0px 0px 5px;
+  font-size: 1.2rem;
+}
+
+/* page Carrito */
+
+.tituloCarrito{
+  text-align:center; 
+  color: #693535;
+  margin: 20px 10%;
+
+}
+.box-tabla{
+  display: flex;
+  justify-content: center;
+}
+.tabla{
+  width: 90%;
+  border-bottom: 1px solid #693535;
+  border-collapse: collapse;
+}
+.tabla tr th,td{
+  padding: 10px;
+  color: #693535;
+}
+.img-tabla{
+  width: 40px;
+  height: auto;
+  vertical-align: inherit;
+}
+.centrado{
+  font-weight: normal;
+  text-align: center;
+}
+.izquierda{
+  font-weight: normal;
+  text-align: inherit;
+}
+.btn-tabla{
+  height: 25px;
+  width: 25px;
+  color: #693535;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid ;
+  background-color:#fae9bd;
+  
+}
+.btnBorrar-tabla{
+  height: 40px;
+  width: 40px;
+  color: #000;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db2f2f;
+  cursor: pointer;
+  border: 1px solid #d80b0b;
+  margin: auto;
+}
+.box-vacio{
+  width: 90%;
+  height: 40px;
+  background-color: #050505;
+
+}
+.box-vacio h1{
+  font-size: 1rem;
+  color:black;
+}
