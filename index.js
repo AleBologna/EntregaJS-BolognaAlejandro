@@ -1,22 +1,44 @@
 let boxComida = document.querySelector(`.box-comida`);
+let boxJuguetes = document.querySelector(`.box-juguetes`);
 let cart = document.querySelector(`#cart`);
 let carrito = JSON.parse(sessionStorage.getItem(`MyCart`)) || [];
 let carritoHeader = document.querySelector(`.carritoHeader`);
+
+let x=0;
 
 totalCarrito();
 
 function crearCards(){
     productos.forEach((prod) => {
-        boxComida.innerHTML += `<div class="card">
+        if(x<4){
+            boxComida.innerHTML += `
+                                <div class="card">
                                     <div class="img-box">
                                         <img src="${prod.img}" class="img-tamaño"></img>
                                     </div>
                                     <span class="card-detalles">${prod.nombre}</span>
+                                    <span class="card-precio">Precio: $${prod.precio}</span>
                                     <div class="detalles">
                                     <button class="btn" id="btnAgregar-${prod.id}">Agregar <i class='bx bxbtn bx-cart-add bx-flip-horizontal' style='color:#693535' ></i></button>
                                     <button class="btn" id="btnEliminar-${prod.id}">Eliminar <i class='bx bxbtn bx-trash bx-flip-horizontal' style='color:#693535' ></i></button>
                                     </div>
                                 </div>`;
+            }else if(x<8){
+                boxJuguetes.innerHTML += `
+                                <div class="card">
+                                    <div class="img-box">
+                                        <img src="${prod.img}" class="img-tamaño"></img>
+                                    </div>
+                                    <span class="card-detalles">${prod.nombre}</span>
+                                    <span class="card-precio">Precio: $${prod.precio}</span>
+                                    <div class="detalles">
+                                    <button class="btn" id="btnAgregar-${prod.id}">Agregar <i class='bx bxbtn bx-cart-add bx-flip-horizontal' style='color:#693535' ></i></button>
+                                    <button class="btn" id="btnEliminar-${prod.id}">Eliminar <i class='bx bxbtn bx-trash bx-flip-horizontal' style='color:#693535' ></i></button>
+                                    </div>
+                                </div>`;
+                 }
+                                
+                                x++;
       });
       btnAgregar();
       btnEliminar();

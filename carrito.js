@@ -46,7 +46,11 @@ function btnAgregar(){
             }
             sessionStorage.setItem(`MyCart`, JSON.stringify(carrito));
             totalCarrito();
-            mostrarCarrito();
+            if(carrito.length===0){
+                carritoVacio();
+            }else{
+                mostrarCarrito();
+            }
         });
     });
 }
@@ -65,7 +69,11 @@ function btnEliminar(){
             }
             sessionStorage.setItem(`MyCart`, JSON.stringify(carrito));
             totalCarrito();
-            mostrarCarrito();
+            if(carrito.length===0){
+                carritoVacio();
+            }else{
+                mostrarCarrito();
+            }
         });
     });
 }
@@ -80,7 +88,11 @@ function btnBorrarTodo(){
              }
              sessionStorage.setItem(`MyCart`, JSON.stringify(carrito));
              totalCarrito();
-             mostrarCarrito();
+             if(carrito.length===0){
+                carritoVacio();
+            }else{
+                mostrarCarrito();
+            }
          });
      });
  }
@@ -89,5 +101,15 @@ function totalCarrito(){
     let total = carrito.reduce ((acc,ite)=> acc+ ite.cantidad,0);
     carritoHeader.innerText = `${total}`
 }
+function carritoVacio(){
+    cart.innerHTML = `<div class="box-vacio">
+    <p>¡Tu carrito está vacio!</p>
+    </div>
+    `;
+}
 
-mostrarCarrito();
+if(carrito.length===0){
+    carritoVacio();
+}else{
+    mostrarCarrito();
+}

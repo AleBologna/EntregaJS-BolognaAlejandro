@@ -97,16 +97,16 @@ font-size: 1.8rem;
   color: #693535;
 }
 
-.box-comida{
+.box-comida, .box-juguetes{
   margin: 40px 0px;
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 0px;
   flex-wrap: wrap;
 }
 .card{
-  width: 150px;
-  height: 200px;
+  width: 230px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,16 +114,18 @@ font-size: 1.8rem;
 }
 .img-box{
   width:100%;
-  height: 80%;
-  
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .img-tamaño{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
 }
 .card-detalles{
-  margin: 5px;
+  margin: 3px;
   font-size: 1.5rem;
   font-weight: 700;
   color:#693535;
@@ -132,6 +134,12 @@ font-size: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card-precio{
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  color:#693535;
 }
 .btn{
   display: flex;
@@ -165,18 +173,20 @@ font-size: 1.8rem;
   justify-content: center;
 }
 .tabla{
-  width: 90%;
+  width: 95%;
   border-bottom: 1px solid #693535;
   border-collapse: collapse;
 }
 .tabla tr th,td{
-  padding: 10px;
+  padding: 5px;
   color: #693535;
 }
 .img-tabla{
-  width: 40px;
-  height: auto;
+  width: 70px;
+  height: 70px;
   vertical-align: inherit;
+  object-fit: contain;
+
 }
 .centrado{
   font-weight: normal;
@@ -197,25 +207,30 @@ font-size: 1.8rem;
   
 }
 .btnBorrar-tabla{
-  height: 40px;
-  width: 40px;
-  color: #000;
-  font-size: 1.5rem;
+  height: 30px;
+  width: 30px;
+  color: #3a0000;
+  border: 1px solid #8a0000a3;
+  font-size: 1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #db2f2f;
+  background-color: #f10303;
   cursor: pointer;
-  border: 1px solid #d80b0b;
   margin: auto;
 }
-.box-vacio{
-  width: 90%;
-  height: 40px;
-  background-color: #050505;
 
+.box-vacio{
+  width: 70%;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 40px;
+  background-color: #ff000095;
+  border: 3px solid #f603035d ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.box-vacio h1{
-  font-size: 1rem;
-  color:black;
+.box-vacio p{
+  color: #b50000;
 }
