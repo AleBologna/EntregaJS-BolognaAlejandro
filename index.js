@@ -4,13 +4,11 @@ let cart = document.querySelector(`#cart`);
 let carrito = JSON.parse(sessionStorage.getItem(`MyCart`)) || [];
 let carritoHeader = document.querySelector(`.carritoHeader`);
 
-let x=0;
-
 totalCarrito();
 
 function crearCards(){
     productos.forEach((prod) => {
-        if(x<4){
+        if(prod.id<=4){
             boxComida.innerHTML += `
                                 <div class="card">
                                     <div class="img-box">
@@ -23,7 +21,7 @@ function crearCards(){
                                     <button class="btn" id="btnEliminar-${prod.id}">Eliminar <i class='bx bxbtn bx-trash bx-flip-horizontal' style='color:#693535' ></i></button>
                                     </div>
                                 </div>`;
-            }else if(x<8){
+            }else if(prod.id<=8){
                 boxJuguetes.innerHTML += `
                                 <div class="card">
                                     <div class="img-box">
@@ -37,8 +35,6 @@ function crearCards(){
                                     </div>
                                 </div>`;
                  }
-                                
-                                x++;
       });
       btnAgregar();
       btnEliminar();

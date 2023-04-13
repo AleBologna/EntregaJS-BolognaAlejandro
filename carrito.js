@@ -1,6 +1,8 @@
 let carrito = JSON.parse(sessionStorage.getItem(`MyCart`)) || [];
 let carritoHeader = document.querySelector(`.carritoHeader`);
 const cart = document.querySelector(`#cart`);
+const cartPago = document.querySelector(`#cartPago`);
+
 totalCarrito();
 function mostrarCarrito(){
   
@@ -12,14 +14,12 @@ function mostrarCarrito(){
             <table class="tabla">
             <tr>
                 <th rowspan="2" width="50px" class="centrado"><img src="${"." + prod.img}" class="img-tabla" ></th>
-                <th width="50%" class="izquierda"><strong>Nombre: </strong> ${prod.nombre}</th>
+                <th rowspan="2" width="50%" class="izquierda"><strong>Nombre: </strong> ${prod.nombre}</th>
                 <th width="20%" class="centrado">Cantidad: ${prod.cantidad}</th>
                 <th width="10%" class="centrado"><button class="btn-tabla" id="btnAgregar2-${prod.id}">+</button></th>
                 <th width="10%" rowspan="2"  class="centrado"><button class="btnBorrar-tabla" id="borrarTodo-${prod.id}"><i class='bx bx-trash'></i></button></th>
             </tr>
             <tr>
-                
-                <td width="50%"><strong>Descripcion:</strong></td>
                 <td width="20%" class="centrado">Precio: $${prod.precio * prod.cantidad} </td>
                 <td width="10%" class="centrado"><button class="btn-tabla" id="btnEliminar2-${prod.id}">-</button></td>
             </tr>
@@ -27,7 +27,7 @@ function mostrarCarrito(){
         </div>    
         `
     })
-    
+    totalPagar();
     btnAgregar();
     btnEliminar();
     btnBorrarTodo();
@@ -91,7 +91,7 @@ function btnBorrarTodo(){
              if(carrito.length===0){
                 carritoVacio();
             }else{
-                mostrarCarrito();
+                mostrarCarrito();  
             }
          });
      });
@@ -102,10 +102,26 @@ function totalCarrito(){
     carritoHeader.innerText = `${total}`
 }
 function carritoVacio(){
+    cartPago.innerHTML = ``;
     cart.innerHTML = `<div class="box-vacio">
     <p>¡Tu carrito está vacio!</p>
     </div>
     `;
+}
+function totalPagar(){
+    let pagoTotal = carrito.reduce ((acc,ite) => acc + ite.precio * ite.cantidad,0);
+    console.log(pagoTotal);
+    cartPago.innerHTML = ` 
+    <div class="box-pago"> 
+    <h2 class="titulo-total">TOTAL A PAGAR:</h2>
+    <h2 class="cant-pago">$${pagoTotal}</h2>
+    </div> 
+  
+    <div class="box-btns">
+    <a href="../pages/formPago.html" class="btns-compra">INICIAR COMPRA</a>
+    <a href="../index.html" class="btns-compra">VER MAS PRODUCTOS</a>
+    </div>
+    `
 }
 
 if(carrito.length===0){
