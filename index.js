@@ -17,8 +17,8 @@ function crearCards(){
                                     <span class="card-detalles">${prod.nombre}</span>
                                     <span class="card-precio">Precio: $${prod.precio}</span>
                                     <div class="detalles">
-                                    <button class="btn" id="btnAgregar-${prod.id}">Agregar <i class='bx bxbtn bx-cart-add bx-flip-horizontal' style='color:#693535' ></i></button>
-                                    <button class="btn" id="btnEliminar-${prod.id}">Eliminar <i class='bx bxbtn bx-trash bx-flip-horizontal' style='color:#693535' ></i></button>
+                                    <button class="btn" id="btnAgregar-${prod.id}"><i class='bx bxbtn bx-cart-add bx-flip-horizontal' style='color:#693535' ></i></button>
+                                    <button class="btn" id="btnEliminar-${prod.id}"><i class='bx bx-trash'></i></button>
                                     </div>
                                 </div>`;
             }else if(prod.id<=8){
@@ -30,8 +30,8 @@ function crearCards(){
                                     <span class="card-detalles">${prod.nombre}</span>
                                     <span class="card-precio">Precio: $${prod.precio}</span>
                                     <div class="detalles">
-                                    <button class="btn" id="btnAgregar-${prod.id}">Agregar <i class='bx bxbtn bx-cart-add bx-flip-horizontal' style='color:#693535' ></i></button>
-                                    <button class="btn" id="btnEliminar-${prod.id}">Eliminar <i class='bx bxbtn bx-trash bx-flip-horizontal' style='color:#693535' ></i></button>
+                                    <button class="btn" id="btnAgregar-${prod.id}"><i class='bx  bx-cart-add bx-flip-horizontal' style='color:#693535' ></i></button>
+                                    <button class="btn" id="btnEliminar-${prod.id}"><i class='bx bx-trash'></i></button>
                                     </div>
                                 </div>`;
                  }
@@ -43,13 +43,38 @@ function crearCards(){
     function btnAgregar(){
         productos.forEach((prod)=>{
             document.getElementById(`btnAgregar-${prod.id}`).addEventListener(`click`,() => {
+                
                 let cant = carrito.some((el)=> el.id == prod.id);
                 if(cant===false){
                     prod.cantidad=1;
                     carrito.push(prod);
+                    Toastify({
+
+                        text: `Se agrego (1) ${prod.nombre} al carrito`,
+                        offset:{
+                            y:50,
+                        },
+                        duration: 1000,
+                        style:{
+                            background: "#fadd91",
+                            color:"#693535",
+                        }
+                        }).showToast();
                 }else{
                     let miProd = carrito.find((el) => el.id == prod.id);
                     miProd.cantidad++
+                    Toastify({
+
+                        text: `Se agrego (${(miProd.cantidad)}) ${prod.nombre} al carrito`,
+                        offset:{
+                            y:50,
+                        },
+                        duration: 1000,
+                        style:{
+                            background: "#fadd91",
+                            color:"#693535",
+                        }
+                        }).showToast();
                 }
                 sessionStorage.setItem(`MyCart`, JSON.stringify(carrito));
                 totalCarrito();
@@ -64,7 +89,33 @@ function crearCards(){
                     let miProd = carrito.find((el) => el.id == prod.id);
                     if(miProd.cantidad>0){
                     miProd.cantidad--;
-                }
+                    if(miProd.cantidad>=1){
+                    Toastify({
+
+                        text: `Se elimino (${(miProd.cantidad)}) ${prod.nombre} al carrito`,
+                        offset:{
+                            y:50,
+                        },
+                        duration: 1000,
+                        style:{
+                            background: "#fadd91",
+                            color:"#693535",
+                        }
+                        }).showToast();
+                }else if(miProd.cantidad==0){
+                    Toastify({
+
+                        text: `Se elimino ${prod.nombre} del carrito`,
+                        offset:{
+                            y:50,
+                        },
+                        duration: 1000,
+                        style:{
+                            background: "#fadd91",
+                            color:"#693535",
+                        }
+                        }).showToast();
+                }}
                 if(miProd.cantidad == 0){
                     carrito = carrito.filter (el => el.cantidad != 0)
                 }
