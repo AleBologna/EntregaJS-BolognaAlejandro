@@ -110,7 +110,6 @@ function carritoVacio(){
 }
 function totalPagar(){
     let pagoTotal = carrito.reduce ((acc,ite) => acc + ite.precio * ite.cantidad,0);
-    console.log(pagoTotal);
     cartPago.innerHTML = ` 
     <div class="box-pago"> 
     <h2 class="titulo-total">TOTAL A PAGAR:</h2>

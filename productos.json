@@ -1,0 +1,115 @@
+[
+    {
+    "id":1,
+    "precio":9000,
+    "nombre":"Dogpro",
+    "img":"./assets/images/mascota1.webp",
+    "descripcion":"Alimento Dogpro para perro adulto (mayores a 7 años), para medianos y grandes, sabor mix en bolsa de 20 kg."
+},
+{
+    "id":2,
+    "precio":9500,
+    "nombre":"Nutribon",
+    "img":"./assets/images/mascota2.webp",
+    "descripcion":"Alimento balanceado completo extrusado de alta digestibilidad que puede ser suministrado seco, o humedecido en agua, caldo o leche a perros a partir del año de vida."
+},
+{
+    "id":3,
+    "precio":15000,
+    "nombre":"ProPlan",
+    "img":"./assets/images/mascota3.webp",
+    "descripcion":"Alimento Pro Plan OptiHealth para perro adulto de raza mediana sabor pollo y arroz en bolsa de 18 kg."
+},
+{
+    "id":4,
+    "precio":8000,
+    "nombre":"Pedigree",
+    "img":"./assets/images/mascota4.webp",   
+    "descripcion":"Pedigree croquetas para perro adulto sabor carne y vegetales en bolsa de 21kg."
+},
+{
+    "id":5,
+    "precio":1300,
+    "nombre":"Hueso de goma",
+    "img":"./assets/images/mascota5.png",   
+    "descripcion":"Juguete hueso de goma. Tamaño: 20cm x 10cm."
+},
+{
+    "id":6,
+    "precio":1000,
+    "nombre":"Pelota",
+    "img":"./assets/images/mascota6.png",   
+    "descripcion":"Juguete pelota de buen material. Tamaño: 8cm x 8cm "
+},
+{
+    "id":7,
+    "precio":1700,
+    "nombre":"Rascador",
+    "img":"./assets/images/mascota7.png",   
+    "descripcion":"Rascador para gatos. Tamaño: 40cm de altura."
+},
+{
+    "id":8,
+    "precio":800,
+    "nombre":"Soga con pelota",
+    "img":"./assets/images/mascota8.webp",   
+    "descripcion":"Juguete soga con pelota. Buen material."
+},
+{
+    "id":9,
+    "precio":8000,
+    "nombre":"Catpro",
+    "img":"./assets/images/mascota9.webp",
+    "descripcion":"Alimento Catpro Premium Castrados/Indoor para gato adulto sabor mix en bolsa de 7.5kg."
+},
+{
+    "id":10,
+    "precio":6200,
+    "nombre":"Iams",
+    "img":"./assets/images/mascota10.webp",
+    "descripcion":"Alimento Iams Proactive Health Healthy Adult para gato adulto sabor pollo en bolsa de 3 kg."
+},
+{
+    "id":11,
+    "precio":9400,
+    "nombre":"Agility Premium",
+    "img":"./assets/images/mascota11.webp",
+    "descripcion":"Alimento Agility Premium para gato adulto sabor mix en bolsa de 10 kg."
+},
+{
+    "id":12,
+    "precio":12600,
+    "nombre":"Cat Chow",
+    "img":"./assets/images/mascota12.webp",
+    "descripcion":"Alimento Cat Chow Defense Plus para gato adulto sabor pescado en bolsa de 15 kg."
+},
+{
+    "id":13,
+    "precio":3000,
+    "nombre":"Collar",
+    "img":"./assets/images/mascota13.webp",
+    "descripcion":"Collar para perro miniatura."
+},
+{
+    "id":14,
+    "precio":1200,
+    "nombre":"Plato/Tazón",
+    "img":"./assets/images/mascota14.webp",
+    "descripcion":"Plato de comida. Tamaño: 20cm x 20cm"
+},
+{
+    "id":15,
+    "precio":7000,
+    "nombre":"Cama (perro)",
+    "img":"./assets/images/mascota15.webp",
+    "descripcion":"Cama de galleta para perro. Tamaño: 70cm x 70cm."
+},
+{
+    "id":16,
+    "precio":6500,
+    "nombre":"Cama (gato)",
+    "img":"./assets/images/mascota16.webp",
+    "descripcion":"Cama para gatos. Tamaño: 50cm x 50cm."
+}
+
+]
