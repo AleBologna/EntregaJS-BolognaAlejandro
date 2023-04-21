@@ -31,7 +31,7 @@ form.addEventListener("submit",(e) =>{
           )
           btnOk = document.querySelector (".swal2-icon-success .swal2-actions .swal2-confirm, btn, btn-success")
           btnOk.addEventListener("click",()=>{
-            window.location.pathname = "/";
+            window.location.pathname = "./index.html";
           })
         } else if (
           result.dismiss === Swal.DismissReason.cancel
